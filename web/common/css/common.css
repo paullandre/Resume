@@ -1,0 +1,14 @@
+/* 
+    Document   : common
+    Created on : 01 10, 18, 6:24:47 PM
+    Author     : Paul Andre Francisco
+    Description:
+        Create custom css for selected elements
+*/
+
+body { background-color: #000 !important; }
+.navbar, .logo, .logo-lg { background-color: #262626 !important }
+
+#profile { letter-spacing: 5px; font-size: 1em; font-family: Calibri; margin: 0 0 0 -2em; color: #1b6d85; }
+
+#sidehead { letter-spacing: 6px !important; }
