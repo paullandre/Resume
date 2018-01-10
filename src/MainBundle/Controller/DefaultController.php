@@ -16,4 +16,15 @@ class DefaultController extends Controller
     {
         return array('name' => $name);
     }
+    
+    /**
+     * @Route("/menu")
+     */
+    public function viewAction()
+    {        
+        $service = $this->get("services.menu");
+        $records = $service->getAllMenu();                
+        
+        return $this->render('Main/sidebar.html.twig', array("menu" => $records));                      
+    }    
 }

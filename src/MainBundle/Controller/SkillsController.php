@@ -27,10 +27,10 @@ class SkillsController extends Controller
      */
     public function viewAction()
     {        
-        //$service = $this->get("services.skills");
-        //$records = $service->getAllRecords();
+        $service = $this->get("services.menu");
+        $records = $service->getAllMenu();
         
-        return $this->render('Main/main.html.twig');
+        return $this->render('Main/main.html.twig', array("menu" => $records));
               
         print "<pre>";  
         print_r($records);

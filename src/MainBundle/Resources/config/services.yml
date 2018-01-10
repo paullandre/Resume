@@ -7,6 +7,10 @@ services:
     services.skills:
         class: MainBundle\Repository\SkillsRepository
         arguments: [ @doctrine.orm.entity_manager, @service_container ]
+    
+    services.menu:
+        class: MainBundle\Repository\MenuRepository
+        arguments: [ @doctrine.orm.entity_manager, @service_container ]
             
 #    app.repo:
 #        class:  MainBundle\Repository\PatientRepository
