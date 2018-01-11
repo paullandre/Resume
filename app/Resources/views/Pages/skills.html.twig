@@ -1,0 +1,50 @@
+{% extends 'Main/main.html.twig' %}
+{% block page %}
+<div class="content-wrapper" style="background-color: #222d32; border: 1px solid #444">
+    {% block breadcrumbs %}
+        {% include 'Main/breadcrumbs.html.twig' with {'page': 'Skills'} %}
+    {% endblock %}
+    
+    <!-- Main content -->
+    <section class="content container-fluid">
+
+        <!--------------------------
+        | Your Page Content Here |
+        -------------------------->
+        <h1>            
+            <!--<small>Employment</small>-->
+        </h1>
+        <div>            
+            {% if skills is defined %}
+                <div class="row" style="color: white;">
+                {% for language in skills %}
+                
+                    <div class="block">
+                        {{ language.name }}
+                    </div>                
+                    {% if loop.index % 8 == 0 %}
+                        <br />                        
+                    {% endif %}
+                {% endfor %}
+                </div>
+            {% endif %}                                    
+        </div>
+    </section>    
+</div>
+<style>
+    .row
+    {
+        width: 100%;           
+    }
+    
+    .block
+    {
+        width: 85px;
+        display: inline-block;  
+        border: 1px solid #444;
+        margin: 1em 0 3px 1.2em;
+        padding: 2px 2px;
+        text-align: center;
+    }
+    </style>
+{% endblock %}

@@ -10,7 +10,18 @@ services:
     
     services.menu:
         class: MainBundle\Repository\MenuRepository
+        arguments: [ @doctrine.orm.entity_manager, @service_container ]   
+    
+    services.employment:
+        class: MainBundle\Repository\SkillsRepository
         arguments: [ @doctrine.orm.entity_manager, @service_container ]
+    
+    #Side Menu (GLOBAL VARIABLE    
+    menu.controller:
+        class: MainBundle\Controller\MenuController
+        arguments: 
+            container: '@service_container'
+        
             
 #    app.repo:
 #        class:  MainBundle\Repository\PatientRepository

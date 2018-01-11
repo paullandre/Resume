@@ -2,12 +2,16 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
         <h1>
-            <label style="color: #777;">My Profile</label>
+            <label style="color: #777;">
+            {% if page is defined %}
+                    <strong style="font-weight: normal; margin: 0 0 0 0;">{{ page }}</strong>
+            {% endif %}
+            </label>
             <!--<small>Short description of my Profile</small>-->
         </h1>
         <ol class="breadcrumb">
-            <li><a href="#"><i class="fa fa-dashboard"></i> Level</a></li>
-            <li class="active">Here</li>
+            <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+            <li class="active">{{ page }}</li>
         </ol>
     </section>
 {% endblock %}

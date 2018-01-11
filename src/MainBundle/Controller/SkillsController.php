@@ -23,18 +23,15 @@ class SkillsController extends Controller
     }
     
     /**
-     * @Route("/view")
+     * @Route("/renderSkills")
      */
-    public function viewAction()
-    {        
-        $service = $this->get("services.menu");
-        $records = $service->getAllMenu();
+    public function getSkills()
+    {
+        $service = $this->get("services.skills");
+        $records = $service->getAllSkills();
         
-        return $this->render('Main/main.html.twig', array("menu" => $records));
-              
-        print "<pre>";  
-        print_r($records);
-        print "</pre>";
-        die;
+        return $records;          
+        
+//        return $this->render('Pages/projects.html.twig', array("menu" => $records, 'active' => 'projects'));
     }
 }

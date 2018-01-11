@@ -5,18 +5,31 @@
             <li class="header" id="sidehead">HIGHLIGHTS</li>            
             {% for data in menu %}
                 {% if loop.index == 1 %}
-                    <li class="active"><a href="#"><i class="{{ data.classname }}"></i><span>{{ data.name }}</span></a></li>
+                    <li class="clickable"><a href="{{ path('home') }}"><i class="{{ data.classname }}"></i><span>{{ data.name }}</span></a></li>
                 {% else %}                    
-                    <li><a href="{{ path('home') }}"><i class="{{ data.classname }}"></i> <span>{{ data.name }}</span></a></li>
+                    <li class="clickable"><a href="{{ path(data.link) }} "><i class="{{ data.classname }}"></i> <span>{{ data.name }}</span></a></li>
                 {% endif %}                                        
             {% endfor %}
-        </ul>        
+        </ul>       
     </section>    
 </aside>
 <script src="{{ asset('AdminLTE/bower_components/jquery/dist/jquery.min.js') }}"></script>
 <script>
     $(document).ready(function()
     {
+        {% if active is defined %}
+            $(".clickable").each(function()
+            {
+                var className = $(this).children("a").children("span").html();
+                
+                console.log(className.toLowerCase());
+                
+                if( className.toLowerCase() == "{{ active }}")
+                {
+                    $(this).addClass("active");
+                }
+            });
+        {% endif %}
         /*$.ajax(
         {
             type: "POST",

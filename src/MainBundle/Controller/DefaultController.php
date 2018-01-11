@@ -9,6 +9,7 @@ use Symfony\Component\HttpFoundation\Request;
 
 class DefaultController extends Controller
 {
+    public $data;
     /**
      * @Route("/hello/{name}")
      * @Template()
@@ -16,7 +17,7 @@ class DefaultController extends Controller
     public function indexAction($name)
     {
         return array('name' => $name);
-    }
+    }        
     
     /**
      * @Route("/menu")
@@ -28,12 +29,4 @@ class DefaultController extends Controller
         
         return $this->render('Main/sidebar.html.twig', array("menu" => $records));                      
     }        
-    
-    /**
-     * @Route("/home")
-     */
-    public function homeAction(Request $request)
-    {
-        return $this->render('Pages/home.html.twig', array('message' => "Welcome!"));				
-    }
 }

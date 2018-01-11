@@ -13,4 +13,28 @@ app:
 
 home:
     path:      /home
-    defaults:  { _controller: MainBundle:Default:home }
+    defaults:  { _controller: MainBundle:Menu:home }
+
+employment:
+    path:      /employment
+    defaults:  { _controller: MainBundle:Menu:employment }
+
+profile:
+    path:      /profile
+    defaults:  { _controller: MainBundle:Menu:profile }
+
+skills:
+    path:      /skills
+    defaults:  { _controller: MainBundle:Menu:skills }
+
+projects:
+    path:      /projects
+    defaults:  { _controller: MainBundle:Menu:projects }
+
+schools:
+    path:      /schools
+    defaults:  { _controller: MainBundle:Menu:schools }
+
+contacts:
+    path:      /contacts
+    defaults:  { _controller: MainBundle:Menu:contacts }

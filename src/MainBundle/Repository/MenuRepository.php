@@ -8,14 +8,14 @@ use MainBundle\Entity\Menu;
 
 class MenuRepository
 {
-    protected $em;      
+    protected $em;
     
     function __construct(EntityManager $em) 
     {
         $this->em = $em;
     }
     
-    public function getAllMenu() 
+    public function getAllMenu()
     {
         $repo  = $this->em->getRepository(Menu::class);
         $array = $repo->findBy(array(), array("ordering" => "ASC"));                

@@ -85,10 +85,10 @@ class SkillsRepository
         return array("message" => "Success" ,"id" => $birth);
     }
 
-    public function getAllRecords() 
+    public function getAllSkills() 
     {
         $repo  = $this->em->getRepository(Skills::class);
-        $array = $repo->findAll();        
+        $array = $repo->findAll();
         
         return $array;
     }
