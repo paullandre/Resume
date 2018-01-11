@@ -5,6 +5,7 @@ namespace MainBundle\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
+use Symfony\Component\HttpFoundation\Request;
 
 class DefaultController extends Controller
 {
@@ -26,5 +27,13 @@ class DefaultController extends Controller
         $records = $service->getAllMenu();                
         
         return $this->render('Main/sidebar.html.twig', array("menu" => $records));                      
-    }    
+    }        
+    
+    /**
+     * @Route("/home")
+     */
+    public function homeAction(Request $request)
+    {
+        return $this->render('Pages/home.html.twig', array('message' => "Welcome!"));				
+    }
 }

@@ -10,3 +10,7 @@ main_main:
 app:
     resource: '@AppBundle/Controller/'
     type: annotation
+
+home:
+    path:      /home
+    defaults:  { _controller: MainBundle:Default:home }

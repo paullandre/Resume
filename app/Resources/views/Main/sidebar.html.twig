@@ -6,10 +6,10 @@
             {% for data in menu %}
                 {% if loop.index == 1 %}
                     <li class="active"><a href="#"><i class="{{ data.classname }}"></i><span>{{ data.name }}</span></a></li>
-                {% else %}
-                    <li><a href="#"><i class="{{ data.classname }}"></i> <span>{{ data.name }}</span></a></li>
+                {% else %}                    
+                    <li><a href="{{ path('home') }}"><i class="{{ data.classname }}"></i> <span>{{ data.name }}</span></a></li>
                 {% endif %}                                        
-            {% endfor %}                        
+            {% endfor %}
         </ul>        
     </section>    
 </aside>
