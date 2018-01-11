@@ -5,7 +5,7 @@
             <li class="header" id="sidehead">HIGHLIGHTS</li>            
             {% for data in menu %}
                 {% if loop.index == 1 %}
-                    <li class="active"><a href="#"><i class="{{ data.classname }}"></i> <span>{{ data.name }}</span></a></li>
+                    <li class="active"><a href="#"><i class="{{ data.classname }}"></i><span>{{ data.name }}</span></a></li>
                 {% else %}
                     <li><a href="#"><i class="{{ data.classname }}"></i> <span>{{ data.name }}</span></a></li>
                 {% endif %}                                        
