@@ -10,28 +10,33 @@
 
         <!--------------------------
         | Your Page Content Here |
-        -------------------------->
-        <h1>            
-            <!--<small>Employment</small>-->
-        </h1>
+        -------------------------->        
         <div>            
             {% if skills is defined %}
-                <div class="row" style="color: white;">
+                <div class="row" style="color: white;" style="margin: 0 0 0 0.3em !important;">
                 {% for language in skills %}
                 
                     <div class="block">
                         {{ language.name }}
                     </div>                
-                    {% if loop.index % 8 == 0 %}
+                    {% if loop.index % 9 == 0 %}
                         <br />                        
                     {% endif %}
                 {% endfor %}
                 </div>
             {% endif %}                                    
         </div>
+        <div class="form-group col-lg-2">            
+            <button type="button" class="btn btn-warning" style="margin: 1.5em 0 0 -0.3em;">
+                <li style="list-style: none;">
+                    <a href="{{ '' }} "><i></i> <span id="label_skills"style="">Add Skills</span></a>
+                </li>
+            </button>
+        </div>
     </section>    
 </div>
 <style>
+    #label_skills { color: red; font-weight: 700;}
     .row
     {
         width: 100%;           
@@ -40,9 +45,12 @@
     .block
     {
         width: 85px;
-        display: inline-block;  
-        border: 1px solid #444;
-        margin: 1em 0 3px 1.2em;
+        display: inline-block;          
+        border-top: none;
+        border-right: none;
+        border-left: none;
+        border-bottom: 1px solid #444;        
+        margin: 1em 0 3px 1.9em;
         padding: 2px 2px;
         text-align: center;
     }

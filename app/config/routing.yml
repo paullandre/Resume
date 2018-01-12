@@ -38,3 +38,8 @@ schools:
 contacts:
     path:      /contacts
     defaults:  { _controller: MainBundle:Menu:contacts }
+
+renderAddCompany:
+    path:      /renderAddCompany
+    defaults:  { _controller: MainBundle:Company:renderAddCompany }
+

@@ -6,15 +6,59 @@
     {% endblock %}
     
     <!-- Main content -->
-    <section class="content container-fluid">
-
+    <section class="content container-fluid">        
         <!--------------------------
         | Your Page Content Here |
         -------------------------->
-        <h1>            
-            <!--<small>Employment</small>-->
-        </h1>
-
+        <div class="box-body">
+            {% if employment is defined %}
+                <table class="table table-bordered" id="table_company">                    
+                    <tr class="head">
+                        <th>Company</th>
+                        <th>Position</th>
+                        <th>Address</th>
+                        <th>From</th>
+                        <th>To</th>
+                        <th>Current</th>
+                    </tr>
+                                        
+                    {% for records in employment %}                    
+                    <tr class="rec glowing-border">
+                        <td>{{ records.name }}</td>
+                        <td>{{ records.position }}</td>
+                        <td>{{ records.address }}</td>
+                        <td>{{ records.dateFrom }}</td>
+                        <td>{{ records.dateTo }}</td>
+                        <td>{{ records.isCurrent == 0 ? 'No' : 'Yes' }}</td>
+                    </tr>                    
+                    {% endfor %}
+                </table>
+            {% endif %}
+        </div>
+        <div class="form-group col-lg-2">            
+            <button type="button" class="btn btn-warning" style="margin: 1.5em 0 0 -0.3em;">
+                <li style="list-style: none;">
+                    <a href="{{ path('renderAddCompany') }} "><i></i> <span id="label_exp"style="">Add Experience</span></a>
+                </li>
+            </button>
+        </div>
     </section>    
 </div>
+<style>
+    #label_exp { color: red; font-weight: 700;}
+    tr th { color: #FFF; text-align: center; font-weight: normal; }
+    tr td { color: #FFF; }
+    table { border-collapse: collapse; }
+    table, th, td { border-color: #444 !important; }
+    table tr th { border: 2px solid #444 !important; }
+    /*.rec:hover td { color: #336699; background-color: #FFF; }*/
+    .glowing-border { border: 0.5px solid #dadada !important; }
+    .glowing-border:hover
+    {
+        outline: none;
+        border-color: #9ecaed;
+        box-shadow: 0 0 40px darkSlateGray;
+        cursor: pointer;
+    }
+</style>
 {% endblock %}

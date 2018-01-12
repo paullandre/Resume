@@ -18,7 +18,7 @@ class MenuRepository
     public function getAllMenu()
     {
         $repo  = $this->em->getRepository(Menu::class);
-        $array = $repo->findBy(array(), array("ordering" => "ASC"));                
+        $array = $repo->findBy(array(), array("ordering" => "ASC"));
         
         return $array;
     }

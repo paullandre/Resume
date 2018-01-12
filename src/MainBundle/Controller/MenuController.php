@@ -49,7 +49,12 @@ class MenuController extends Controller
         $service = $this->get("services.menu");
         $records = $service->getAllMenu();
         
-        return $this->render('Pages/employment.html.twig', array("menu" => $records, 'active' => 'employment'));
+        $service = $this->get("services.company");
+        $company = $service->getAllCompany();
+        
+        return $this->render('Pages/employment.html.twig', array("menu" => $records, 
+            'active' => 'employment',
+            'employment' => $company));
     }
     
     /**

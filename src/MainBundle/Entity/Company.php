@@ -43,16 +43,16 @@ class Company
     private $address;
 
     /**
-     * @var datetime_immutable
+     * @var string
      *
-     * @ORM\Column(name="dateFrom", type="datetime_immutable")
+     * @ORM\Column(name="dateFrom", type="string")
      */
     private $dateFrom;
 
     /**
-     * @var datetime_immutable
+     * @var string
      *
-     * @ORM\Column(name="dateTo", type="datetime_immutable")
+     * @ORM\Column(name="dateTo", type="string")
      */
     private $dateTo;
 
@@ -64,18 +64,25 @@ class Company
     private $profileId;
 
     /**
-     * @var datetime_immutable
+     * @var string
      *
-     * @ORM\Column(name="createDate", type="datetime_immutable")
+     * @ORM\Column(name="createDate", type="string")
      */
     private $createDate;
 
     /**
-     * @var datetime_immutable
+     * @var string
      *
-     * @ORM\Column(name="updateDate", type="datetime_immutable")
+     * @ORM\Column(name="updateDate", type="string")
      */
     private $updateDate;
+    
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="is_current", type="boolean")
+     */
+    private $isCurrent;
 
 
     /**
@@ -163,7 +170,7 @@ class Company
     /**
      * Set dateFrom
      *
-     * @param datetime_immutable $dateFrom
+     * @param string $dateFrom
      *
      * @return Company
      */
@@ -177,7 +184,7 @@ class Company
     /**
      * Get dateFrom
      *
-     * @return datetime_immutable
+     * @return string
      */
     public function getDateFrom()
     {
@@ -187,7 +194,7 @@ class Company
     /**
      * Set dateTo
      *
-     * @param datetime_immutable $dateTo
+     * @param string $dateTo
      *
      * @return Company
      */
@@ -201,7 +208,7 @@ class Company
     /**
      * Get dateTo
      *
-     * @return datetime_immutable
+     * @return string
      */
     public function getDateTo()
     {
@@ -235,7 +242,7 @@ class Company
     /**
      * Set createDate
      *
-     * @param datetime_immutable $createDate
+     * @param string $createDate
      *
      * @return Company
      */
@@ -249,7 +256,7 @@ class Company
     /**
      * Get createDate
      *
-     * @return datetime_immutable
+     * @return string
      */
     public function getCreateDate()
     {
@@ -259,7 +266,7 @@ class Company
     /**
      * Set updateDate
      *
-     * @param datetime_immutable $updateDate
+     * @param string $updateDate
      *
      * @return Company
      */
@@ -273,11 +280,35 @@ class Company
     /**
      * Get updateDate
      *
-     * @return datetime_immutable
+     * @return string
      */
     public function getUpdateDate()
     {
         return $this->updateDate;
+    }
+    
+    /**
+     * Set isCurrent
+     *
+     * @param boolean $isCurrent
+     *
+     * @return Company
+     */
+    public function setIsCurrent($isCurrent)
+    {
+        $this->isCurrent = $isCurrent;
+
+        return $this;
+    }
+
+    /**
+     * Get isCurrent
+     *
+     * @return boolean
+     */
+    public function getIsCurrent()
+    {
+        return $this->isCurrent;
     }
 }
 
