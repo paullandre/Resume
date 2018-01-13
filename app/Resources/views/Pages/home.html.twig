@@ -20,7 +20,7 @@
                 <div class="block">
                     <img src="{{ asset('img/') ~ image.filename }}" alt="Smiley face" height="50" width="80">
                     {% set title = image.filename|split(".") %}
-                    <small>{{ title[0] }}</small>
+                    <small>{{ title[0]|capitalize }}</small>
                 </div>
                 {% if loop.index % 9 == 0 %}
                     <br />
