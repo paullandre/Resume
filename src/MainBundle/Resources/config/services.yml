@@ -16,6 +16,14 @@ services:
         class: MainBundle\Repository\CompanyRepository
         arguments: [ @doctrine.orm.entity_manager, @service_container ]
     
+    services.home_skills:
+        class: MainBundle\Repository\HomeSkillsRepository
+        arguments: [ @doctrine.orm.entity_manager, @service_container ]
+    
+    services.education:
+        class: MainBundle\Repository\EducationRepository
+        arguments: [ @doctrine.orm.entity_manager, @service_container ]
+    
     #Side Menu (GLOBAL VARIABLE    
     menu.controller:
         class: MainBundle\Controller\MenuController

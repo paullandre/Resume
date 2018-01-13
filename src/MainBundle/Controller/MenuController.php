@@ -13,6 +13,7 @@ use Symfony\Component\DependencyInjection\Container;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
 use MainBundle\Entity\Skills;
+use MainBundle\Entity\HomeSkills;
 
 class MenuController extends Controller
 {    
@@ -38,7 +39,12 @@ class MenuController extends Controller
         $service = $this->get("services.menu");
         $records = $service->getAllMenu();
         
-        return $this->render('Pages/home.html.twig', array("menu" => $records, 'active' => 'home'));				
+        $service = $this->get("services.home_skills");
+        $home_skills = $service->getAllHomeSkills();                
+        
+        return $this->render('Pages/home.html.twig', array("menu" => $records, 
+            'active' => 'home',
+            'home_skills' => $home_skills));				
     }
     
     /**
@@ -53,7 +59,7 @@ class MenuController extends Controller
         $company = $service->getAllCompany();
         
         return $this->render('Pages/employment.html.twig', array("menu" => $records, 
-            'active' => 'employment',
+            'active' => 'Employment / Experience',
             'employment' => $company));
     }
     
@@ -79,11 +85,6 @@ class MenuController extends Controller
         $service = $this->get("services.skills");
         $skills  = $service->getAllSkills();
         
-//        print "<pre>";
-//        print_r($skills);
-//        print "</pre>";
-//        die;
-        
         return $this->render('Pages/skills.html.twig', array("menu" => $records, 
             'active' => 'skills',
             'skills' => $skills));
@@ -108,7 +109,12 @@ class MenuController extends Controller
         $service = $this->get("services.menu");
         $records = $service->getAllMenu();
         
-        return $this->render('Pages/school.html.twig', array("menu" => $records, 'active' => 'schools'));
+        $service = $this->get("services.education");
+        $education = $service->getAllEducation();                
+        
+        return $this->render('Pages/school.html.twig', array("menu" => $records, 
+            'active' => 'Schools Attended',
+            'education' => $education));
     }
     
     /**

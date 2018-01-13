@@ -10,11 +10,40 @@
 
         <!--------------------------
         | Your Page Content Here |
-        -------------------------->
-        <h1>            
-            <!--<small>Home page</small>-->
-        </h1>
-
+        -------------------------->        
+        <strong style="color: #4b646f; font-weight: normal; font-size: 15px; margin: 0 0 0 0.5em;"> 
+            Some of the Technologies used: 
+        </strong>
+        
+        <div class="form-group row" style="color: white;" style="margin: 0 0 0 0.3em !important;">
+            {% for image in home_skills %}
+                <div class="block">
+                    <img src="{{ asset('img/') ~ image.filename }}" alt="Smiley face" height="50" width="80">
+                    {% set title = image.filename|split(".") %}
+                    <small>{{ title[0] }}</small>
+                </div>
+                {% if loop.index % 9 == 0 %}
+                    <br />
+                {% endif %}
+            {% endfor %}
+        </div>
+        
     </section>    
 </div>
+<style>
+    .row
+    {
+        width: 100%;           
+    }
+    
+    .block
+    {
+        width: 85px;
+        display: inline-block;          
+        border: none;        
+        margin: 3em 1em 3px 1em;
+        padding: 2px 2px;
+        text-align: center;
+    }
+</style>
 {% endblock %}

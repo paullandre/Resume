@@ -10,11 +10,51 @@
 
         <!--------------------------
         | Your Page Content Here |
-        -------------------------->
-        <h1>            
-            <!--<small>Employment</small>-->
-        </h1>
-
+        -------------------------->        
+        <div class="box-body">
+            {% if education is defined %}
+                <table class="table table-bordered" id="table_school">                    
+                    <tr class="head">
+                        <th>Level</th>
+                        <th>Institution</th>
+                        <th>Course</th>
+                        <th>Address</th>
+                        <th>From</th>
+                        <th>To</th>
+                    </tr>
+                                        
+                    {% for records in education %}      
+                    {% set dateFrom = records.dateFrom|split(" ") %}
+                    {% set dateTo = records.dateTo|split(" ") %}
+                    <tr class="rec glowing-border">
+                        <td>{{ records.level }}</td>
+                        <td>{{ records.institution }}</td>
+                        <td>{{ records.course }}</td>
+                        <td>{{ records.address }}</td>
+                        <td>{{ dateFrom[0] }}</td>
+                        <td>{{ dateTo[0] }}</td>
+                    </tr>                    
+                    {% endfor %}
+                </table>
+            {% endif %}
+        </div>                
     </section>    
 </div>
+<style>
+    #label_exp { color: red; font-weight: 700;}
+    tr th { color: #FFF; text-align: center; font-weight: normal; }
+    tr td { color: #FFF; }
+    table { border-collapse: collapse; }
+    table, th, td { border-color: #444 !important; }
+    table tr th { border: 2px solid #444 !important; }
+    /*.rec:hover td { color: #336699; background-color: #FFF; }*/
+    .glowing-border { border: 0.5px solid #dadada !important; }
+    .glowing-border:hover
+    {
+        outline: none;
+        border-color: #9ecaed;
+        box-shadow: 0 0 40px darkSlateGray;
+        cursor: pointer;
+    }
+</style>
 {% endblock %}

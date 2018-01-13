@@ -22,13 +22,15 @@
                         <th>Current</th>
                     </tr>
                                         
-                    {% for records in employment %}                    
+                    {% for records in employment %}
+                    {% set dateFrom = records.dateFrom|split(" ") %}
+                    {% set dateTo = records.dateTo|split(" ") %}                    
                     <tr class="rec glowing-border">
                         <td>{{ records.name }}</td>
                         <td>{{ records.position }}</td>
                         <td>{{ records.address }}</td>
-                        <td>{{ records.dateFrom }}</td>
-                        <td>{{ records.dateTo }}</td>
+                        <td>{{ dateFrom[0] }}</td>
+                        <td>{{ dateTo[0] }}</td>
                         <td>{{ records.isCurrent == 0 ? 'No' : 'Yes' }}</td>
                     </tr>                    
                     {% endfor %}

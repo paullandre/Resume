@@ -20,14 +20,16 @@
         {% if active is defined %}
             $(".clickable").each(function()
             {
-                var className = $(this).children("a").children("span").html();
+                var className = $(this).children("a").children("span").html();                                                               
+                var db = "{{ active }}";                                
                 
-                console.log(className.toLowerCase());
-                
-                if( className.toLowerCase() == "{{ active }}")
+                if( className.toLowerCase() == db.toLocaleLowerCase())
                 {
-                    $(this).addClass("active");
-                }
+                    $(this).addClass("active")
+                            .css("outline", "none")
+                            .css("border-color","#9ecaed")
+                            .css("box-shadow", "0 0 50px darkslategrey");
+                }                                   
             });
         {% endif %}
         /*$.ajax(
