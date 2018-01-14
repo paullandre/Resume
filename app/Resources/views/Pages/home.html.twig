@@ -18,11 +18,11 @@
         <div class="form-group row" style="color: white;" style="margin: 0 0 0 0.3em !important;">
             {% for image in home_skills %}
                 <div class="block">
-                    <img src="{{ asset('img/') ~ image.filename }}" alt="Smiley face" height="50" width="80">
+                    <img src="{{ asset('img/') ~ image.filename }}" alt="Smiley face" height="70" width="100">
                     {% set title = image.filename|split(".") %}
                     <small>{{ title[0]|capitalize }}</small>
                 </div>
-                {% if loop.index % 9 == 0 %}
+                {% if loop.index % 7 == 0 %}
                     <br />
                 {% endif %}
             {% endfor %}
@@ -38,7 +38,7 @@
     
     .block
     {
-        width: 85px;
+        width: 100px;
         display: inline-block;          
         border: none;        
         margin: 3em 1em 3px 1em;
