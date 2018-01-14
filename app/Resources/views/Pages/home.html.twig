@@ -2,7 +2,7 @@
 {% block page %}
 <div class="content-wrapper" style="background-color: #222d32; border: 1px solid #444">
     {% block breadcrumbs %}
-        {% include 'Main/breadcrumbs.html.twig' with {'page': 'Home'} %}
+        {% include 'Main/breadcrumbs.html.twig' with {'page': 'Home', 'color': '#408B40'} %}
     {% endblock %}
 
     <!-- Main content -->
@@ -15,8 +15,17 @@
                 <i class="description">game support</i>, 
                 <i class="description">backend development</i>, 
                 <i class="description">desktop applications</i>, 
-                <i class="description">scripting tools</i> . <i class="description">Analyzes codes</i> for system debugging of exisiting applications, performs <i class="description">code review</i>, monitors <i class="description">system peformance</i> through the use ot tools such as <i class="description">New Relic, Zabbix</i>
-                and other replated monitoring tools. Test queries and see if there are ways to improve query performance of applications with the help of monitoring tools. Involved also in <i class="eng">reengineering</i> applications to improve <i class="eng">productivity</i>, <i class="eng">efficiency</i>, <i class="eng">portability</i>, <i class="eng">reusability</i>, <i class="eng">maintainability</i> that enables other developers understand clearly the codes that runs on frameworks or proprietary frameworks. Maintain these applications that runs on <i class="platform">linux/unix</i> and <i class="platform">windows</i> environment both locally hosted and majority are cloud based application hosted in <i class="platform">Amazon Web Services (AWS)</i>
+                <i class="description">scripting tools</i> . 
+                <i class="other">Develop</i>, 
+                <i class="other">maintain</i> and 
+                <i class="other">support</i> new and existing applications using 
+                <i class="language">PHP </i> and <i class="language"> Java</i>. Participates in gathering data from 
+                <i class="other">business</i> requirements and convert to 
+                <i class="other">technical</i> or 
+                <i class="other">system</i> requirements.
+                <i class="description">Analyzes codes</i> for system debugging of exisiting applications, performs <i class="description">code review</i>, monitors <i class="description">system peformance</i> through the use ot tools such as <i class="description">New Relic, Zabbix</i>
+                and other replated monitoring tools. Test queries and see if there are ways to improve 
+                <i class="eng">query performance</i> of applications with the help of monitoring tools. Involved also in <i class="eng">reengineering</i> applications to improve <i class="eng">productivity</i>, <i class="eng">efficiency</i>, <i class="eng">portability</i>, <i class="eng">reusability</i>, <i class="eng">maintainability</i> that enables other developers understand clearly the codes that runs on frameworks or proprietary frameworks. Maintain these applications that runs on <i class="platform">linux/unix</i> and <i class="platform">windows</i> environment both locally hosted and majority are cloud based application hosted in <i class="platform">Amazon Web Services (AWS)</i>
             </strong>
             <br />
             <strong class="col-sm-10 resp">
@@ -54,6 +63,8 @@
     </section>    
 </div>
 <style>	
+    .other { color: #999966; }
+    .language { color: lightseagreen; }
     #response li { list-style: square; color: darkgray; text-shadow: 0px 3px 3px rgba(119, 119, 119, 0.4); }
     .resp { margin: 2em 0 0 4em !important; }	
     label { color: lightgrey; }

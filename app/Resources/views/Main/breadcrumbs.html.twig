@@ -2,13 +2,16 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
         <h1>
-            <label style="color: #777;">
+            <label style="color: #777;">                
             {% if page is defined %}
-                {% if page == "Home" %}
-                <strong style="font-weight: normal; margin: 0 0 0 0.3em;">{{ "Overview" }}</strong>
+                {% set first = page|first %}
+                {% set succeed = page|slice(1, 100) %}
+                {% if page == "Home" %}                    
+                <strong style="font-weight: normal; margin: 0 0 0 0.3em;"><i id="{{ color }}" class="first">O</i>verview</strong>
                 {% else %}
-                <strong style="font-weight: normal; margin: 0 0 0 0.3em;">{{ page }}</strong>
-                {% endif %}                    
+                <strong style="font-weight: normal; margin: 0 0 0 0.3em;"><i id="{{ color }}" class="first">{{ first }}</i>{{ succeed }}
+                </strong>
+                {% endif %}
             {% endif %}
             </label>
             <!--<small>Short description of my Profile</small>-->
@@ -18,4 +21,14 @@
             <li class="active">{{ page }}</li>
         </ol>
     </section>
+<script src="{{ asset('AdminLTE/bower_components/jquery/dist/jquery.min.js') }}"></script>
+<script>
+    $(document).ready(function()
+    {
+        $(".first").each(function()
+        {
+            $(this).css("color", $(this).attr("id"));
+        });
+    });
+</script>
 {% endblock %}
