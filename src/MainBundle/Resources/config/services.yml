@@ -27,6 +27,10 @@ services:
     services.responsibility:
         class: MainBundle\Repository\ResponsibilityRepository
         arguments: [ @doctrine.orm.entity_manager, @service_container ]
+
+    services.contact:
+        class: MainBundle\Repository\ContactRepository
+        arguments: [ @doctrine.orm.entity_manager, @service_container ]
     
     #Side Menu (GLOBAL VARIABLE    
     menu.controller:
