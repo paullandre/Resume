@@ -15,12 +15,12 @@
             {% if education is defined %}
                 <table class="table table-bordered" id="table_school">                    
                     <tr class="head">
-                        <th>Level</th>
-                        <th>Institution</th>
-                        <th>Course</th>
-                        <th>Address</th>
-                        <th>From</th>
-                        <th>To</th>
+                        <th class="th_head">Level</th>
+                        <th class="th_head">Institution</th>
+                        <th class="th_head">Course</th>
+                        <th class="th_head">Address</th>
+                        <th class="th_head">From</th>
+                        <th class="th_head">To</th>
                     </tr>
                                         
                     {% for records in education %}      
@@ -41,6 +41,7 @@
     </section>    
 </div>
 <style>
+	.th_head { background-color: #1a2226 !important; color: #4b646f !important; }
     #label_exp { color: red; font-weight: 700;}
     tr th { color: #FFF; text-align: center; font-weight: normal; }
     tr td { color: #FFF; }

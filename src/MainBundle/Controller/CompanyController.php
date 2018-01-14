@@ -22,6 +22,6 @@ class CompanyController extends Controller
         $service = $this->get("services.menu");
         $records = $service->getAllMenu();
         
-        return $this->render('Company/add.html.twig', array("menu" => $records));
+        return $this->render('Company/add.html.twig', array("menu" => $records, 'active' => 'Employment / Experience'));
     }
 }
