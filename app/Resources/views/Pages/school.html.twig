@@ -31,8 +31,8 @@
                         <td>{{ records.institution }}</td>
                         <td>{{ records.course }}</td>
                         <td>{{ records.address }}</td>
-                        <td>{{ dateFrom[0] }}</td>
-                        <td>{{ dateTo[0] }}</td>
+                        <td>{{ dateFrom[0]|date("F Y") }}</td>
+                        <td>{{ dateTo[0]|date("F Y") }}</td>
                     </tr>                    
                     {% endfor %}
                 </table>
@@ -41,10 +41,10 @@
     </section>    
 </div>
 <style>
-	.th_head { background-color: #1a2226 !important; color: #4b646f !important; }
+	.th_head { background-color: #1a2226 !important; color: #4b646f !important; letter-spacing: 6px; }
     #label_exp { color: red; font-weight: 700;}
     tr th { color: #FFF; text-align: center; font-weight: normal; }
-    tr td { color: #FFF; }
+    tr td { color: lightgray; }
     table { border-collapse: collapse; }
     table, th, td { border-color: #444 !important; }
     table tr th { border: 2px solid #444 !important; }

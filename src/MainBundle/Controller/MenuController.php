@@ -40,11 +40,15 @@ class MenuController extends Controller
         $records = $service->getAllMenu();
         
         $service = $this->get("services.home_skills");
-        $home_skills = $service->getAllHomeSkills();                
+        $home_skills = $service->getAllHomeSkills();
+        
+        $service = $this->get("services.responsibility");
+        $responsibility = $service->getAllResponsibility();
         
         return $this->render('Pages/home.html.twig', array("menu" => $records, 
             'active' => 'home',
-            'home_skills' => $home_skills));				
+            'home_skills' => $home_skills,
+            'responsibility' => $responsibility));				
     }
     
     /**

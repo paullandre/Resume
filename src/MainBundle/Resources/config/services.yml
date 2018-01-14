@@ -24,6 +24,10 @@ services:
         class: MainBundle\Repository\EducationRepository
         arguments: [ @doctrine.orm.entity_manager, @service_container ]
     
+    services.responsibility:
+        class: MainBundle\Repository\ResponsibilityRepository
+        arguments: [ @doctrine.orm.entity_manager, @service_container ]
+    
     #Side Menu (GLOBAL VARIABLE    
     menu.controller:
         class: MainBundle\Controller\MenuController

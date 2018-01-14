@@ -4,38 +4,77 @@
     {% block breadcrumbs %}
         {% include 'Main/breadcrumbs.html.twig' with {'page': 'Home'} %}
     {% endblock %}
-    
+
     <!-- Main content -->
     <section class="content container-fluid">
+        <div class="row col-lg-8">
+            <strong class="col-sm-10" style="margin: 0 0 0 4em !important;">Over 10 years of I.T. experience as a <i class="test">&nbsp; Web / Full Stack Developer &nbsp;</i> with 2 years experience as a <i class="test">&nbsp; Technical Lead &nbsp;</i> doing mainly 
+                <i class="description">Software programming</i>, 
+                <i class="description">web development</i>, 
+                <i class="description">application support</i>, 
+                <i class="description">game support</i>, 
+                <i class="description">backend development</i>, 
+                <i class="description">desktop applications</i>, 
+                <i class="description">scripting tools</i> . <i class="description">Analyzes codes</i> for system debugging of exisiting applications, performs <i class="description">code review</i>, monitors <i class="description">system peformance</i> through the use ot tools such as <i class="description">New Relic, Zabbix</i>
+                and other replated monitoring tools. Test queries and see if there are ways to improve query performance of applications with the help of monitoring tools. Involved also in <i class="eng">reengineering</i> applications to improve <i class="eng">productivity</i>, <i class="eng">efficiency</i>, <i class="eng">portability</i>, <i class="eng">reusability</i>, <i class="eng">maintainability</i> that enables other developers understand clearly the codes that runs on frameworks or proprietary frameworks. Maintain these applications that runs on <i class="platform">linux/unix</i> and <i class="platform">windows</i> environment both locally hosted and majority are cloud based application hosted in <i class="platform">Amazon Web Services (AWS)</i>
+            </strong>
+            <br />
+            <strong class="col-sm-10 resp">
+                <label>Some of the Responsibilities includes:</label><br />
+                <ul id="response">
+                {% if responsibility is defined %}
+                    {% for record in responsibility %}
+                    <li>{{ record.duty }}</li>
+                    {% endfor %}
+                {% endif %}
+                </ul>
+            </strong>
 
+        </div>
         <!--------------------------
         | Your Page Content Here |
         -------------------------->        
-        <strong style="color: #4b646f; font-weight: normal; font-size: 15px; margin: 0 0 0 0.5em;"> 
+        <strong style="color: gray; font-weight: normal; font-size: 15px; margin: 0 0 0 0.5em;"> 
             Some of the Technologies used: 
-        </strong>
-        
-        <div class="form-group row" style="color: white;" style="margin: 0 0 0 0.3em !important;">
-            {% for image in home_skills %}
+        </strong>		
+
+        <div class="form-group row" style="color: white;" style="margin: -1em 0 0 0.3em !important;">
+        {% for image in home_skills %}
                 <div class="block">
                     <img src="{{ asset('img/') ~ image.filename }}" alt="Smiley face" height="70" width="100">
-                    {% set title = image.filename|split(".") %}
+                {% set title = image.filename|split(".") %}
                     <small>{{ title[0]|capitalize }}</small>
                 </div>
-                {% if loop.index % 7 == 0 %}
-                    <br />
-                {% endif %}
-            {% endfor %}
+            {% if loop.index % 7 == 0 %}
+                <br />
+            {% endif %}
+        {% endfor %}
         </div>
-        
+
     </section>    
 </div>
-<style>
+<style>	
+    #response li { list-style: square; color: darkgray; text-shadow: 0px 3px 3px rgba(119, 119, 119, 0.4); }
+    .resp { margin: 2em 0 0 4em !important; }	
+    label { color: lightgrey; }
+    .platform { color: #CC00FF; }
+    .eng { color: #AE4D4D; letter-spacing: 1px}
+    .description { color: #e08e0b; letter-spacing: 1px; }
+    .test { color: #CC3300; background-color: #000;}
+    .row strong 
+    { 
+        margin: 0 0 0 -1.7em; 
+        font: 13px/15px "Trebuchet MS",Geneva,Arial,Helvetica,SunSans-Regular,sans-serif; 
+        color: #777;
+        line-height: 1.8em;
+    }
+
     .row
     {
-        width: 100%;           
+        width: 100%;
+        margin: 0 0 2em 0;
     }
-    
+
     .block
     {
         width: 100px;
