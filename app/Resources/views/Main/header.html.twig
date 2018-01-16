@@ -6,7 +6,7 @@
         <!-- mini logo for sidebar mini 50x50 pixels -->
         <span class="logo-mini"><b>A</b>LT</span>
         <!-- logo for regular state and mobile devices -->
-        <span class="logo-lg" id="profile">Paul Andre Francisco</span>
+        <span class="logo-lg" id="clock"></span>
     </a>
 
     <!-- Header Navbar -->
@@ -56,7 +56,60 @@
         </div>
     </nav>
 </header>
+<script src="{{ asset('AdminLTE/bower_components/jquery/dist/jquery.min.js') }}"></script>
+<script>
+    function display_c()
+    {
+        var refresh = 1000; // Refresh rate in milli seconds
+        mytime = setTimeout('current_time()',refresh);
+    }
+
+    function current_time()
+    {
+        let strcount;
+        let x = new Date();        
+        
+        let month = x.getMonth() + 1;
+        month = month < 10 ? "0" + month : month;        
+        let day = x.getUTCDate();
+        let year = x.getFullYear();
+        let y = month + "/" + day + "/" + year;                
+        
+        let hours = x.getHours();
+        if(hours == 0 || hours < 10)
+        {            
+            hours = "0" + hours;
+        }                        
+        
+{#        alert(hours); return;#}
+        
+        let seconds = x.getSeconds() < 10 ? "0" + x.getSeconds() : x.getSeconds();
+        let minutes = x.getMinutes() < 10 ? "0" + x.getMinutes() : x.getMinutes();
+        let merediem = x.getHours() > 12 ? "PM" : "AM";
+        
+        let me = "&nbsp;&nbsp;&nbsp;&nbsp; " + hours + ":" + minutes + ":" + seconds  + " " + merediem;                
+        
+        //y += " " + hours + ":" + x.getMinutes() + ":" + seconds  + " " + merediem;
+        $("#clock").html(y + "<i>" + me + "</i>");
+        
+        tt = display_c();
+    }
+    
+    $(document).ready(function()
+    {
+        current_time();
+    });
+</script>
 <style>
+    #mil { letter-spacing: 3px; }
+    #clock 
+    {
+{#        letter-spacing: 1px;#}
+        margin: 1.4em 0 0 -3em; 
+        color: #6600CC;
+        font: 13px/15px "Trebuchet MS",Geneva,Arial,Helvetica,SunSans-Regular,sans-serif; 
+    }
+    
     #profile 
     { 
         margin: 0 0 0 -1em; 
