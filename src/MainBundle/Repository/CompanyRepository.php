@@ -54,7 +54,7 @@ class CompanyRepository
         return $result->getfName();
     }
     
-    public function insertPatient($data = array())
+    public function insertCompany($data = array())
     {   
         $fName   = $data[0];
         $mName   = $data[1];
