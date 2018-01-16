@@ -76,20 +76,23 @@
         let y = month + "/" + day + "/" + year;                
         
         let hours = x.getHours();
+		
+		if(hours > 12 && hours <= 23)
+		{
+			hours = hours - 12;
+		}
+		
         if(hours == 0 || hours < 10)
         {            
             hours = "0" + hours;
-        }                        
-        
-{#        alert(hours); return;#}
+        }		      
         
         let seconds = x.getSeconds() < 10 ? "0" + x.getSeconds() : x.getSeconds();
         let minutes = x.getMinutes() < 10 ? "0" + x.getMinutes() : x.getMinutes();
         let merediem = x.getHours() > 12 ? "PM" : "AM";
         
         let me = "&nbsp;&nbsp;&nbsp;&nbsp; " + hours + ":" + minutes + ":" + seconds  + " " + merediem;                
-        
-        //y += " " + hours + ":" + x.getMinutes() + ":" + seconds  + " " + merediem;
+                
         $("#clock").html(y + "<i>" + me + "</i>");
         
         tt = display_c();
