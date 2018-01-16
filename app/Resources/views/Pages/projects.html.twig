@@ -10,9 +10,24 @@
 
         <!--------------------------
         | Your Page Content Here |
-        -------------------------->
-        {{ dump(projects) }}
+        -------------------------->        
+        {% if projects is defined %}
+            {% for data in projects %}
+            <ul class="parent_ul">
+                <li>{{ data.projectName }} </li>
+            </ul>
+            <ul class="child_ul">
+                <li>{{ data.companyId }}</li>
+                <li>{{ data.description }} </li>
+                <li>{{ data.skillId }}</li>                
+            </ul>
+            {% endfor %}
+        {% endif %}
 
     </section>    
 </div>
+        <style>
+            .parent_ul, .child_ul { color: darkgray; }
+            .parent_ul { list-style: none; margin: 0 0 0 -2.3em }
+        </style>
 {% endblock %}
