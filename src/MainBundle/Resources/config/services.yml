@@ -32,6 +32,10 @@ services:
         class: MainBundle\Repository\ContactRepository
         arguments: [ @doctrine.orm.entity_manager, @service_container ]
     
+    services.project:
+        class: MainBundle\Repository\ProjectRepository
+        arguments: [ @doctrine.orm.entity_manager, @service_container ]
+    
     #Side Menu (GLOBAL VARIABLE    
     menu.controller:
         class: MainBundle\Controller\MenuController
