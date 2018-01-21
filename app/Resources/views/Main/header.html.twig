@@ -73,8 +73,13 @@
         month = month < 10 ? "0" + month : month;        
         let day = x.getUTCDate();
         let year = x.getFullYear();
-        let y = month + "/" + day + "/" + year;                
-        
+        let y = month + "/" + day + "/" + year;
+
+		//var event = new Date(Date.UTC(year, month, day, 0, 0, 0));
+		//var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+        //console.log(event.toLocaleDateString('fil-PH', options));	
+		//let z = event.toLocaleDateString('fil-PH', options);
+		
         let hours = x.getHours();
 		
 		if(hours > 12 && hours <= 23)
@@ -100,7 +105,7 @@
     
     $(document).ready(function()
     {
-        current_time();
+        current_time();					
     });
 </script>
 <style>
@@ -109,7 +114,8 @@
     {
 {#        letter-spacing: 1px;#}
         margin: 1.4em 0 0 -3em; 
-        color: #6600CC;
+{#        color: #6600CC;#}
+		color: #FFF;
         font: 13px/15px "Trebuchet MS",Geneva,Arial,Helvetica,SunSans-Regular,sans-serif; 
     }
     

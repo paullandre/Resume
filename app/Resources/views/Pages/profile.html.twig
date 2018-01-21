@@ -1,6 +1,6 @@
 {% extends 'Main/main.html.twig' %}
 {% block page %}
-<div class="content-wrapper" style="background-color: #222d32; border: 1px solid #444">
+<div class="content-wrapper" style="background-color: #222d32; border: 1px solid #37464f">
     {% block breadcrumbs %}
         {% include 'Main/breadcrumbs.html.twig' with {'page': 'Profile', 'color': 'aqua'} %}
     {% endblock %}
@@ -11,10 +11,43 @@
         <!--------------------------
         | Your Page Content Here |
         -------------------------->
-        <h1>            
-            <!--<small>Profile</small>-->
-        </h1>
+        <div class="box-body">
+            <div id="outer">
+                <div id="picturePerfect">
+                    <img src="{{ asset('img/ako.jpg') }}" alt="Smiley face" height="70" width="100">                
+                </div>  
+                <h1> Paul Andre Francisco </h1>
+            </div>
+        </div>
 
     </section>    
 </div>
+<script src="{{ asset('AdminLTE/bower_components/jquery/dist/jquery.min.js') }}"></script>
+
+<script>
+    $(document).ready(function()
+    {
+        //$("#picturePerfect").css("background-image", "url('img/ako/jpg')");
+    });
+</script>
+
+<style>
+    #outer
+    {
+        height: 18em;
+        width: 18em;
+        border: 1px solid Gray;
+        padding: 1.5em 0 0 1.5em;        
+    }
+    
+    #picturePerfect img
+    { 
+        height: 15em;
+        width: 15em;
+        background-size: 16em 16em;
+        background-repeat: no-repeat;
+        background-position: center;
+        display: block;
+    }
+</style>    
 {% endblock %}
