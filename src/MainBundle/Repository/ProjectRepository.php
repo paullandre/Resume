@@ -9,10 +9,10 @@ use MainBundle\Entity\Project;
 
 class ProjectRepository
 {
-    protected $em;      
+    protected $em;          
     
     function __construct(EntityManager $em) 
-    {
+    {        
         $this->em = $em;
     }        
 

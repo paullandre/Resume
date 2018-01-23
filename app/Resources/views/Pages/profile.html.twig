@@ -12,12 +12,52 @@
         | Your Page Content Here |
         -------------------------->
         <div class="box-body">
-            <div id="outer">
-                <div id="picturePerfect">
-                    <img src="{{ asset('img/ako.jpg') }}" alt="Smiley face" height="70" width="100">                
-                </div>  
-                <h1> Paul Andre Francisco </h1>
-            </div>
+            <div class="col-md-9">
+                <div class="content-editable">
+                  <h2 contenteditable="true" class="changeable" id="name">Paul Andre Francisco</h2>
+                </div>
+                
+                <div class="content-editable title">
+                    <strong id="title">Senior PHP Developer</strong>
+                </div>
+                
+                <table id="details">                    
+                    <tbody>
+                        <tr>
+                            <th>Experience: </th>
+                            <td>
+                                <span contenteditable="true" class="changeable" id="editjexperience"> 
+                                    9 Years in I.T. development
+                                </span>                                
+                            </td>                            
+                        </tr>
+                        <tr>
+                            <th></th>
+                            <td>                                
+                                <span>2 years as Team / Technical Lead</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th></th>
+                            <td>                                
+                                <span>7 years as web developer / full stack developer</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th></th>
+                            <td>                                
+                                <span>9 years as PHP Developer</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th></th>
+                            <td>                                
+                                <span>2 years as Java Developer</span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>            
         </div>
 
     </section>    
@@ -32,12 +72,47 @@
 </script>
 
 <style>
+    #details 
+    {
+        margin: 1em 0 0 -1em !important; 
+        border-collapse: separate; 
+        border-spacing: 1em 0.5em; 
+    }        
+    
+    #details tbody tr { margin: 1em 2em 0 0 !important; color: darkgray; }
+    #details { margin: 2em 0 0 0; font: 13px/15px "Trebuchet MS",Geneva,Arial,Helvetica,SunSans-Regular,sans-serif !important; }
+    .title { margin: 3em 0 0 0; }
+    #title { font: 17px/19px "Trebuchet MS",Geneva,Arial,Helvetica,SunSans-Regular,sans-serif !important; }
+    
+    #name, #title
+    {
+        color: darkgray;
+        font-weight: 100;
+    }
+    
+    {#.name h1 
+    {
+        font: 17px/19px "Trebuchet MS",Geneva,Arial,Helvetica,SunSans-Regular,sans-serif !important;        
+    }#}
+    
+    .row 
+    {
+        width: 100%;
+        margin: 0 auto;
+    }
+    
+    .block 
+    {
+        width: 18em;
+        display: inline-block;
+    }
+    
     #outer
     {
         height: 18em;
         width: 18em;
         border: 1px solid Gray;
-        padding: 1.5em 0 0 1.5em;        
+        padding: 1.5em 0 0 1.5em;     
     }
     
     #picturePerfect img

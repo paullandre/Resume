@@ -13,11 +13,12 @@
         -------------------------->        
         <div>            
             {% if skills is defined %}
-                <div class="row" style="color: white;" style="margin: 0 0 0 0.3em !important;">
+                <div class="row" style="color: #4b646f;" style="margin: 0 0 0 0.3em !important;">
                 {% for language in skills %}
                 
                     <div class="block">
                         {{ language.name }}
+                        <hr>
                     </div>                
                     {% if loop.index % 8 == 0 %}
                         <br />                        
@@ -36,23 +37,28 @@
     </section>    
 </div>
 <style>
+    hr 
+    {
+        border: 0;
+        height: 1px;
+        background-image: linear-gradient(to right, rgba(0, 0, 0, 0.1), rgba(111, 111, 111, 0.75), rgba(0, 0, 0, 0.1));
+        margin: 0.3em 0 -0.2em 0;
+    }       
+
     #label_skills { color: red; font-weight: 700; }
     .row
     {
-        width: 100%;           
+        width: 100%;
     }
     
     .block
     {
         width: 85px;
-        display: inline-block;          
-        border-top: none;
-        border-right: none;
-        border-left: none;
-        border-bottom: 1px solid #444;        
-        margin: 1em 0 3px 1.9em;
-        padding: 2px 2px;
-        text-align: center;
+        display: inline-block;        
+        /*border-bottom: 1px solid #444;*/
+        margin: 1.5em 0 3px 1.9em;
+        padding: 0 5px;
+        text-align: center;           
     }
 </style>
 {% endblock %}
