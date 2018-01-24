@@ -34,6 +34,13 @@ class Skills
      * @ORM\Column(name="category", type="string", length=255)
      */
     private $category;
+    
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="is_used", type="boolean")
+     */
+    private $isUsed;
 
     /**
      * @var string
@@ -106,6 +113,30 @@ class Skills
     public function getCategory()
     {
         return $this->category;
+    }
+    
+    /**
+     * Set isUsed
+     *
+     * @param boolean $isUsed
+     *
+     * @return Skills
+     */
+    public function setIsUsed($isUsed)
+    {
+        $this->isUsedt = $isUsed;
+
+        return $this;
+    }
+
+    /**
+     * Get isUsed
+     *
+     * @return boolean
+     */
+    public function getIsUsed()
+    {
+        return $this->isUsed;
     }
 
     /**

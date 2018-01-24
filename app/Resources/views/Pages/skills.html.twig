@@ -17,7 +17,7 @@
                 {% for language in skills %}
                 
                     <div class="block">
-                        {{ language.name }}
+                        <strong>{{ language.name }}</strong>
                         <hr>
                     </div>                
                     {% if loop.index % 8 == 0 %}
@@ -36,7 +36,26 @@
         </div>
     </section>    
 </div>
+<script src="{{ asset('AdminLTE/bower_components/jquery/dist/jquery.min.js') }}"></script>
+<script>
+    $(document).ready(function()
+    {
+
+    });
+</script>
+
 <style>
+    .block:hover::first-letter
+    { 
+{#        font-size: 200%;#}
+        color: rgb(0, 0, 255) !important;        
+    }
+    
+    .block strong:hover
+    {
+        cursor: pointer;
+    }
+    
     hr 
     {
         border: 0;

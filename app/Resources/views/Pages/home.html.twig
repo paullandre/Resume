@@ -39,6 +39,7 @@
                 {% if responsibility is defined %}
                     {% for record in responsibility %}
                     <li>{{ record.duty }}</li>
+                    <hr>
                     {% endfor %}
                 {% endif %}
                 </ul>
@@ -68,6 +69,13 @@
     </section>    
 </div>
 <style>	
+    hr 
+    {
+        border: 0;
+        height: 0.6px;
+        background-image: linear-gradient(to right, rgba(11, 21,31, 0.1), rgba(111, 111, 111, 0.75), rgba(0, 0, 0, 0.1));
+        margin: 0.3em 0 0.8em -2em !important;
+    }
     .other { color: #999966; }
     .language { color: lightseagreen; }
     #response li { list-style: square; color: darkgray; text-shadow: 0px 3px 3px rgba(119, 119, 119, 0.4); }
