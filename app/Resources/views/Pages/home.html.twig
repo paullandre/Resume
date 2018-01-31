@@ -35,8 +35,8 @@
             <br />
             <strong class="col-sm-10 resp">
                 <label>Some of the Responsibilities includes:</label><br />
-                <ul id="response">
-                {% if responsibility is defined %}
+                <ul id="response">                    
+                {% if responsibility is defined %}                    
                     {% for record in responsibility %}
                     <li>{{ record.duty }}</li>
                     <hr>
@@ -51,7 +51,7 @@
         -------------------------->        
         <strong style="color: gray; font-weight: normal; font-size: 15px; margin: 0 0 0 0.5em;"> 
             Some of the Technologies used: 
-        </strong>		
+        </strong>	
 
         <div class="form-group row" style="color: white;" style="margin: -1em 0 0 0.3em !important;">
         {% for image in home_skills %}

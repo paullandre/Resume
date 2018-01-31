@@ -6,7 +6,7 @@
             {% for data in menu %}
                 {% if loop.index == 1 %}
                     <li class="clickable"><a href="{{ path('home') }}"><i class="{{ data.classname }}"></i><span>{{ data.name }}</span></a></li>
-                {% else %}                    
+                {% else %}
                     <li class="clickable"><a href="{{ path(data.link) }} "><i class="{{ data.classname }}"></i> <span>{{ data.name }}</span></a></li>
                 {% endif %}                                        
             {% endfor %}

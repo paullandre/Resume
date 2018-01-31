@@ -22,22 +22,21 @@ class ProjectRepository
                 . 'FROM MainBundle:Project p '
                 . 'JOIN MainBundle:Company c WITH p.companyId = c.id '
                 . 'JOIN MainBundle:Skills s WITH s.id IN (SELECT x.skillId FROM MainBundle:Project x)');
-        
-        print_r($query->getSQL());
-        die;
-        
-        //->setParameter('user', $user->getId())
+//        
+//        print_r($query->getSQL());
+//        die;
+//                
         $result = $query->getResult();
         
-        print "<pre>";
-        print_r($result);
-        print "</pre>";
-        die;
+//        print "<pre>";
+//        print_r($result);
+//        print "</pre>";
+//        die;
         
-        $repo  = $this->em->getRepository(Project::class);
-        $array = $repo->findAll();
+//        $repo  = $this->em->getRepository(Project::class);
+//        $array = $repo->findAll();
         
-        return $array;
+        return $result;
     }
 
 }

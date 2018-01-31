@@ -34,4 +34,15 @@ class SkillsController extends Controller
         
 //        return $this->render('Pages/projects.html.twig', array("menu" => $records, 'active' => 'projects'));
     }
+    
+    /**
+     * @Route("/renderAddSkills")
+     */
+    public function renderAddSkillsAction()
+    {        
+        $service = $this->get("services.menu");
+        $records = $service->getAllMenu();
+        
+        return $this->render('Skills/add.html.twig', array("menu" => $records, 'active' => 'Skills'));
+    }
 }

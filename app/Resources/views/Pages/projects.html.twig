@@ -14,10 +14,10 @@
         {% if projects is defined %}
             {% for data in projects %}
             <ul class="parent_ul">
-                <li>{{ data.projectName }} </li>
+                <li>{{ data.project }} </li>
             </ul>
             <ul class="child_ul">
-                <li>{{ data.companyId }}</li>
+                <li>{{ data.company }}</li>
                 <li>{{ data.description }} </li>
                 <li>{{ data.skillId }}</li>                
             </ul>

@@ -43,3 +43,7 @@ renderAddCompany:
     path:      /renderAddCompany
     defaults:  { _controller: MainBundle:Company:renderAddCompany }
 
+renderAddSkills:
+    path:      /renderAddSkills
+    defaults:  { _controller: MainBundle:Skills:renderAddSkills }
+
