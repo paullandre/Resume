@@ -16,19 +16,15 @@
             <span class="sr-only">Toggle navigation</span>
         </a>
         <!-- Navbar Right Menu -->
+		<!--
         <div class="navbar-custom-menu">
-            <ul class="nav navbar-nav">                
-                <!-- User Account Menu -->
-                <li class="dropdown user user-menu">
-                    <!-- Menu Toggle Button -->
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                        <!-- The user image in the navbar-->
-                        <img src="{{ asset('AdminLTE/dist/img/ako.jpg')}} " class="user-image" alt="User Image">
-                        <!-- hidden-xs hides the username on small devices so only the image appears. -->
+            <ul class="nav navbar-nav">                                
+                <li class="dropdown user user-menu">                    
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">                        
+                        <img src="{{ asset('AdminLTE/dist/img/ako.jpg')}} " class="user-image" alt="User Image">                        
                         <span class="hidden-xs">Paul Andre Francisco</span>
                     </a>
-                    <ul class="dropdown-menu">
-                        <!-- The user image in the menu -->
+                    <ul class="dropdown-menu">                        
                         <li class="user-header">
                             <img src="{{ asset('AdminLTE/dist/img/ako.jpg')}}" class="img-circle" alt="User Image">
 
@@ -36,8 +32,7 @@
                                 Paul Andre Francisco - Web Developer
                                 <small>Member since Nov. 2012</small>
                             </p>
-                        </li>                        
-                        <!-- Menu Footer-->
+                        </li>                                                
                         <li class="user-footer">
                             <div class="pull-left">
                                 <a href="#" class="btn btn-default btn-flat">Profile</a>
@@ -47,13 +42,13 @@
                             </div>
                         </li>
                     </ul>
-                </li>                      
-                <!-- Control Sidebar Toggle Button -->
+                </li>                                      
                 <li>
                     <a href="#" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a>
                 </li>
             </ul>
         </div>
+		-->
     </nav>
 </header>
 <script src="{{ asset('AdminLTE/bower_components/jquery/dist/jquery.min.js') }}"></script>
@@ -96,9 +91,10 @@
         let minutes = x.getMinutes() < 10 ? "0" + x.getMinutes() : x.getMinutes();
         let merediem = x.getHours() > 12 ? "PM" : "AM";
         
-        let me = "&nbsp;&nbsp;&nbsp;&nbsp; " + hours + ":" + minutes + ":" + seconds  + " " + merediem;                
+        let me = "&nbsp;&nbsp;&nbsp;&nbsp; " + hours + ":" + minutes + ":";		
                 
-        $("#clock").html(y + "<i>" + me + "</i>");
+        $("#clock").html(y + "<i>" + me + "</i><i style='color: cyan;'>" + seconds + "</i>" 
+		+ "<i style='color: BlueViolet; font-size: 17px;'>&nbsp;&nbsp" + merediem + "</i>");
         
         tt = display_c();
     }
@@ -113,7 +109,7 @@
     #clock 
     {
 {#        letter-spacing: 1px;#}
-        margin: 1.4em 0 0 -3em; 
+        margin: 1.4em 0 0 -2.5em; 
 {#        color: #6600CC;#}
         color: #FFF;
         font: 13px/15px "Trebuchet MS",Geneva,Arial,Helvetica,SunSans-Regular,sans-serif; 

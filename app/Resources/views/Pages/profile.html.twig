@@ -12,55 +12,96 @@
         | Your Page Content Here |
         -------------------------->
         <div class="box-body">
-            <div class="col-md-9">
+            <div class="col-md-3">
                 <div class="content-editable">
                   <h2 contenteditable="true" class="changeable" id="name">Paul Andre Francisco</h2>
                 </div>
                 
 				<div class="content container-fluid">
-					<img src="{{ asset('img/ako.jpg') }}" alt="Smiley face" height="220" width="220">
+					<img src="{{ asset('img/ako.jpg') }}" alt="Smiley face" height="225" width="230">
 				</div>
 				
                 <div class="content-editable title">
                     <strong id="title">Senior PHP Developer</strong>
                 </div>
-                
-                <table id="details">                    
-                    <tbody>
-                        <tr>
-                            <th>Experience: </th>
-                            <td>
-                                <span contenteditable="true" class="changeable" id="editjexperience"> 
-                                    9 Years in I.T. development
-                                </span>                                
-                            </td>                            
-                        </tr>
-                        <tr>
-                            <th></th>
-                            <td>                                
-                                <span>2 years as Team / Technical Lead</span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th></th>
-                            <td>                                
-                                <span>7 years as web developer / full stack developer</span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th></th>
-                            <td>                                
-                                <span>9 years as PHP Developer</span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th></th>
-                            <td>                                
-                                <span>2 years as Java Developer</span>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
+			</div>
+			
+			<div class="col-md-4">				
+				<div class="pull-right" id="description">				
+					<table id="details">                    
+						<tbody>
+							<tr>
+								<th></th>
+								<td>
+									<span><b>Experience: </b></span>                                
+								</td>                            
+							</tr>
+							<tr>
+								<th></th>
+								<td>
+									<span contenteditable="true" class="changeable" id="editjexperience"> 
+										9 years - PHP Developer
+									</span>                                
+								</td>                            
+							</tr>
+							<tr>
+								<th></th>
+								<td>                                
+									<span>2 years - Team / Technical Lead</span>
+								</td>
+							</tr>
+							
+							<tr>
+								<th></th>
+								<td>                                
+									<span>7 years - Web Developer / Full Stack Developer</span>
+								</td>
+							</tr>
+							<tr>
+								<th></th>
+								<td>                                
+									<span>2 years - Java Developer</span>
+								</td>
+							</tr>
+							<tr>
+								<th></th>
+								<td>                                
+									<span>7 years - using HTML5 </span>
+								</td>
+							</tr>							
+							<tr>
+								<th></th>
+								<td>                                
+									<span>7 years - using Javascript</span>
+								</td>
+							</tr>
+							<tr>
+								<th></th>
+								<td>                                
+									<span>7 years - CSS3</span>
+								</td>
+							</tr>
+							<tr>
+								<th></th>
+								<td>                                
+									<span>2 years - Programmer / I.T </span>
+								</td>
+							</tr>
+							<tr>
+								<th></th>
+								<td>                                
+									<span>3 years - Apps Support</span>
+								</td>
+							</tr>
+							<tr>
+								<th></th>
+								<td>                                
+									<span>9 Years in I.T. development</span>
+								</td>
+							</tr>                        
+						</tbody>
+					</table>
+				</div>
             </div>            
         </div>
 
@@ -76,6 +117,7 @@
 </script>
 
 <style>
+	#description { margin: 4em 0 0 -10em !important; }
     #details 
     {
         margin: 1em 0 0 -1em !important; 
@@ -85,13 +127,14 @@
     
     #details tbody tr { margin: 1em 2em 0 0 !important; color: darkgray; }
     #details { margin: 2em 0 0 0; font: 13px/15px "Trebuchet MS",Geneva,Arial,Helvetica,SunSans-Regular,sans-serif !important; }
-    .title { margin: 3em 0 0 0; }
+    .title { margin: 1em 0 0 0; }
     #title { font: 17px/19px "Trebuchet MS",Geneva,Arial,Helvetica,SunSans-Regular,sans-serif !important; }
     
     #name, #title
     {
-        color: darkgray;
-        font-weight: 100;
+        color: white;
+        font-weight: 70;
+		font-size: 28px;
     }
     
     {#.name h1 
@@ -118,6 +161,8 @@
         border: 1px solid Gray;
         padding: 1.5em 0 0 1.5em;     
     }
+	
+	img { margin: 0 0 0 -1em; }
     
     #picturePerfect img
     { 
@@ -126,7 +171,7 @@
         background-size: 16em 16em;
         background-repeat: no-repeat;
         background-position: center;
-        display: block;
+        display: block;		
     }
 </style>    
 {% endblock %}
