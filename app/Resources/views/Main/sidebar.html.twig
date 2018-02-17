@@ -2,15 +2,26 @@
 <aside class="main-sidebar">    
     <section class="sidebar">               
         <ul class="sidebar-menu" data-widget="tree">
-            <li class="header" id="sidehead">HIGHLIGHTS</li>            
+            <li class="header" id="sidehead">HIGHLIGHTS</li>
             {% for data in menu %}
                 {% if loop.index == 1 %}
                     <li class="clickable"><a href="{{ path('home') }}"><i class="{{ data.classname }}"></i><span>{{ data.name }}</span></a></li>
                 {% else %}
                     <li class="clickable"><a href="{{ path(data.link) }} "><i class="{{ data.classname }}"></i> <span>{{ data.name }}</span></a></li>
                 {% endif %}                                        
-            {% endfor %}
+            {% endfor %}            
         </ul>       
+        <ul class="sidebar-menu" data-widget="tree">
+            <li class="header" id="version">FRAMEWORK VERSIONS</li>
+            <li class="header" id="language_php">PHP</li>
+            <li class="framework active back"><a href="#"><i class="fa fa-circle-o-notch text-black"></i> <span>Symfony 2.7  (Current)</span></a></li>
+            <li class="framework back"><a href="#"><i class="fa fa-stop text-blue"></i> <span>Yii 2</span></a></li>
+            <li class="framework back"><a href="#"><i class="fa fa-stop text-red"></i> <span>Laravel</span></a></li>
+            
+            <li class="header" id="language_java">JAVA</li>
+            <li class="framework back"><a href="#"><i class="fa fa-stop text-green"></i> <span>Spring</span></a></li>
+            <li class="framework back"><a href="#"><i class="fa fa-stop text-orange"></i> <span>Struts 2</span></a></li>            
+        </ul>
     </section>    
 </aside>
 <script src="{{ asset('AdminLTE/bower_components/jquery/dist/jquery.min.js') }}"></script>
@@ -32,6 +43,17 @@
                 }                                   
             });
         {% endif %}
+        
+        $(".framework").each(function()
+            {                
+                if($(this).attr("class") == "framework active")
+                {
+                    $(this).css("outline", "none")
+                            .css("border-color","#9ecaed")
+                            .css("box-shadow", "0 0 50px darkslategrey");
+                }                                   
+            });
+                
         /*$.ajax(
         {
             type: "POST",

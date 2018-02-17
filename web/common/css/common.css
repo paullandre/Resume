@@ -10,3 +10,12 @@ body { background-color: #000 !important; }
 .navbar, .logo, .logo-lg { background-color: #222d32 !important }
 /* #37464f #222d32 */
 #sidehead { letter-spacing: 10px !important; }
+
+#version { letter-spacing: 5px !important; color: #9E6E0D; margin: 3em 0 0 0; }
+
+#language_php 
+{
+    letter-spacing: 5px !important; border-top: 1px solid #AE4D4D; color: #AE4D4D; text-align: right;   
+}
+
+#language_java { letter-spacing: 5px !important; border-top: 1px solid #AE4D4D; color: #AE4D4D; margin: 0.5em 0 0 0; text-align: right; }

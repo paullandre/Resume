@@ -38,7 +38,7 @@
             {% endif %}
         </div>
         <div class="form-group col-lg-2">                
-            <button type="button" class="btn btn-warning" style="margin: 1.5em 0 0 -0.3em;">
+            <button type="button" class="btn btn-warning btn-emp" style="margin: 1.5em 0 0 -0.3em;">
                 <li style="list-style: none;">
                     <a href="{{ path('renderAddCompany') }} "><i></i> <span id="label_exp"style="">Add Experience</span></a>
                 </li>
@@ -47,9 +47,12 @@
     </section>    
 </div>
 <style>	
+    .btn-emp { background-color: rgb(34, 45, 50); border: 1px solid #637B7B; }
+    .btn-emp:hover { background-color:rgba(34,45,50,0.3); border: 1px solid #637B7B;}    
+    #label_exp { color: lightgray; font-weight: 700;}
+    
     .rec td:nth-child(6) { text-align: center; }
-    .th_head { background-color: #1a2226 !important; color: #4b646f !important; letter-spacing: 6px; }
-    #label_exp { color: red; font-weight: 700;}
+    .th_head { background-color: #1a2226 !important; color: #4b646f !important; letter-spacing: 6px; }    
     tr th { color: #FFF; text-align: center; font-weight: normal; }
     tr td { color: lightgray; }
     table { border-collapse: collapse; }

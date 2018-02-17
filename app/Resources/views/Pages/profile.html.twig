@@ -1,177 +1,178 @@
 {% extends 'Main/main.html.twig' %}
 {% block page %}
-<div class="content-wrapper" style="background-color: #222d32; border: 1px solid #37464f">
-    {% block breadcrumbs %}
-        {% include 'Main/breadcrumbs.html.twig' with {'page': 'Profile', 'color': 'aqua'} %}
-    {% endblock %}
-    
-    <!-- Main content -->
-    <section class="content container-fluid">
+    <div class="content-wrapper" style="background-color: #222d32; border: 1px solid #37464f">
+        {% block breadcrumbs %}
+            {% include 'Main/breadcrumbs.html.twig' with {'page': 'Profile', 'color': 'aqua'} %}
+        {% endblock %}
 
-        <!--------------------------
-        | Your Page Content Here |
-        -------------------------->
-        <div class="box-body">
-            <div class="col-md-3">
-                <div class="content-editable">
-                  <h2 contenteditable="true" class="changeable" id="name">Paul Andre Francisco</h2>
+        <!-- Main content -->
+        <section class="content container-fluid">
+
+            <!--------------------------
+            | Your Page Content Here |
+            -------------------------->
+            <div class="box-body">
+                <div class="col-md-3">
+                    <div class="content-editable">
+                        <h2 contenteditable="true" class="changeable" id="name">Paul Andre Francisco</h2>
+                    </div>
+
+                    <div class="content container-fluid">
+                        <img src="{{ asset('img/ako.jpg') }}" alt="Smiley face" height="225" width="230">
+                    </div>
+
+                    <div class="content-editable title">
+                        <strong id="title">Senior Full Stack Developer</strong>
+                    </div>
                 </div>
-                
-				<div class="content container-fluid">
-					<img src="{{ asset('img/ako.jpg') }}" alt="Smiley face" height="225" width="230">
-				</div>
-				
-                <div class="content-editable title">
-                    <strong id="title">Senior PHP Developer</strong>
-                </div>
-			</div>
-			
-			<div class="col-md-4">				
-				<div class="pull-right" id="description">				
-					<table id="details">                    
-						<tbody>
-							<tr>
-								<th></th>
-								<td>
-									<span><b>Experience: </b></span>                                
-								</td>                            
-							</tr>
-							<tr>
-								<th></th>
-								<td>
-									<span contenteditable="true" class="changeable" id="editjexperience"> 
-										9 years - PHP Developer
-									</span>                                
-								</td>                            
-							</tr>
-							<tr>
-								<th></th>
-								<td>                                
-									<span>2 years - Team / Technical Lead</span>
-								</td>
-							</tr>
-							
-							<tr>
-								<th></th>
-								<td>                                
-									<span>7 years - Web Developer / Full Stack Developer</span>
-								</td>
-							</tr>
-							<tr>
-								<th></th>
-								<td>                                
-									<span>2 years - Java Developer</span>
-								</td>
-							</tr>
-							<tr>
-								<th></th>
-								<td>                                
-									<span>7 years - using HTML5 </span>
-								</td>
-							</tr>							
-							<tr>
-								<th></th>
-								<td>                                
-									<span>7 years - using Javascript</span>
-								</td>
-							</tr>
-							<tr>
-								<th></th>
-								<td>                                
-									<span>7 years - CSS3</span>
-								</td>
-							</tr>
-							<tr>
-								<th></th>
-								<td>                                
-									<span>2 years - Programmer / I.T </span>
-								</td>
-							</tr>
-							<tr>
-								<th></th>
-								<td>                                
-									<span>3 years - Apps Support</span>
-								</td>
-							</tr>
-							<tr>
-								<th></th>
-								<td>                                
-									<span>9 Years in I.T. development</span>
-								</td>
-							</tr>                        
-						</tbody>
-					</table>
-				</div>
-            </div>            
-        </div>
 
-    </section>    
-</div>
-<script src="{{ asset('AdminLTE/bower_components/jquery/dist/jquery.min.js') }}"></script>
+                <div class="col-md-4">				
+                    <div class="pull-right" id="description">				
+                        <table id="details">                    
+                            <tbody>
+                                <tr>
+                                    <th></th>
+                                    <td>
+                                        <span><b>Experience: </b></span>                                
+                                    </td>                            
+                                </tr>
+                                <tr>
+                                    <th></th>
+                                    <td>
+                                        <span contenteditable="true" class="changeable" id="editjexperience"> 
+                                            9 years - PHP Developer
+                                        </span>                                
+                                    </td>                            
+                                </tr>
+                                <tr>
+                                    <th></th>
+                                    <td>                                
+                                        <span>2 years - Team / Technical Lead</span>
+                                    </td>
+                                </tr>
 
-<script>
-    $(document).ready(function()
-    {
-        //$("#picturePerfect").css("background-image", "url('img/ako/jpg')");
-    });
-</script>
+                                <tr>
+                                    <th></th>
+                                    <td>                                
+                                        <span>7 years - Web Developer / Full Stack Developer</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th></th>
+                                    <td>                                
+                                        <span>2 years - Java Developer</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th></th>
+                                    <td>                                
+                                        <span>7 years - using HTML5 </span>
+                                    </td>
+                                </tr>							
+                                <tr>
+                                    <th></th>
+                                    <td>                                
+                                        <span>7 years - using Javascript</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th></th>
+                                    <td>                                
+                                        <span>7 years - CSS3</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th></th>
+                                    <td>                                
+                                        <span>2 years - Programmer / I.T </span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th></th>
+                                    <td>                                
+                                        <span>3 years - Apps Support</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th></th>
+                                    <td>                                
+                                        <span>9 Years in I.T. development</span>
+                                    </td>
+                                </tr>                        
+                            </tbody>
+                        </table>
+                    </div>
+                </div>            
+            </div>
 
-<style>
-	#description { margin: 4em 0 0 -10em !important; }
-    #details 
-    {
-        margin: 1em 0 0 -1em !important; 
-        border-collapse: separate; 
-        border-spacing: 1em 0.5em; 
-    }        
-    
-    #details tbody tr { margin: 1em 2em 0 0 !important; color: darkgray; }
-    #details { margin: 2em 0 0 0; font: 13px/15px "Trebuchet MS",Geneva,Arial,Helvetica,SunSans-Regular,sans-serif !important; }
-    .title { margin: 1em 0 0 0; }
-    #title { font: 17px/19px "Trebuchet MS",Geneva,Arial,Helvetica,SunSans-Regular,sans-serif !important; }
-    
-    #name, #title
-    {
-        color: white;
-        font-weight: 70;
-		font-size: 28px;
-    }
-    
-    {#.name h1 
-    {
-        font: 17px/19px "Trebuchet MS",Geneva,Arial,Helvetica,SunSans-Regular,sans-serif !important;        
-    }#}
-    
-    .row 
-    {
-        width: 100%;
-        margin: 0 auto;
-    }
-    
-    .block 
-    {
-        width: 18em;
-        display: inline-block;
-    }
-    
-    #outer
-    {
-        height: 18em;
-        width: 18em;
-        border: 1px solid Gray;
-        padding: 1.5em 0 0 1.5em;     
-    }
-	
-	img { margin: 0 0 0 -1em; }
-    
-    #picturePerfect img
-    { 
-        height: 15em;
-        width: 15em;
-        background-size: 16em 16em;
-        background-repeat: no-repeat;
-        background-position: center;
-        display: block;		
-    }
-</style>    
+        </section>    
+    </div>
+    <script src="{{ asset('AdminLTE/bower_components/jquery/dist/jquery.min.js') }}"></script>
+
+    <script>
+        $(document).ready(function ()
+        {
+            //$("#picturePerfect").css("background-image", "url('img/ako/jpg')");
+        });
+    </script>
+
+    <style>
+        #description { margin: 4em 0 0 -10em !important; }
+        #details 
+        {
+            margin: 1em 0 0 -1em !important; 
+            border-collapse: separate; 
+            border-spacing: 1em 0.5em; 
+        }        
+
+        #details tbody tr { margin: 1em 2em 0 0 !important; color: darkgray; }
+        #details { margin: 2em 0 0 0; font: 13px/15px "Trebuchet MS",Geneva,Arial,Helvetica,SunSans-Regular,sans-serif !important; }
+        .title { margin: 1em 0 0 0; }
+{#        #title { font: 17px/19px "Trebuchet MS",Geneva,Arial,Helvetica,SunSans-Regular,sans-serif !important; color: #9E6E0D; }#}
+        #title { font: 17px/19px "Trebuchet MS",Geneva,Arial,Helvetica,SunSans-Regular,sans-serif !important; color: #999966; }
+
+        #name
+        {
+            color: white;
+            font-weight: 70;
+            font-size: 28px;
+        }
+
+        {#.name h1 
+        {
+            font: 17px/19px "Trebuchet MS",Geneva,Arial,Helvetica,SunSans-Regular,sans-serif !important;        
+        }#}
+
+        .row 
+        {
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        .block 
+        {
+            width: 18em;
+            display: inline-block;
+        }
+
+        #outer
+        {
+            height: 18em;
+            width: 18em;
+            border: 1px solid Gray;
+            padding: 1.5em 0 0 1.5em;     
+        }
+
+        img { margin: 0 0 0 -1em; }
+
+        #picturePerfect img
+        { 
+            height: 15em;
+            width: 15em;
+            background-size: 16em 16em;
+            background-repeat: no-repeat;
+            background-position: center;
+            display: block;		
+        }
+    </style>    
 {% endblock %}

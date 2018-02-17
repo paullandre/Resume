@@ -28,7 +28,7 @@
             {% endif %}                                    
         </div>
         <div class="form-group col-lg-2">            
-            <button type="button" class="btn btn-warning" style="margin: 1.5em 0 0 -0.3em;">
+            <button type="button" class="btn btn-warning btn-skills" style="margin: 1.5em 0 0 -0.3em;">
                 <li style="list-style: none;">
                     <a href="{{ 'renderAddSkills' }} "><i></i> <span id="label_skills"style="">Add Skills</span></a>
                 </li>
@@ -45,6 +45,10 @@
 </script>
 
 <style>
+    .btn-skills { background-color: rgb(34, 45, 50); border: 1px solid #637B7B; }
+    .btn-skills:hover { background-color:rgba(34,45,50,0.3); border: 1px solid #098bdc;}
+    #label_skills { color: rgb(0, 0, 255); font-weight: 700; }
+    
     .block:hover::first-letter
     { 
 {#        font-size: 200%;#}
@@ -63,8 +67,7 @@
         background-image: linear-gradient(to right, rgba(0, 0, 0, 0.1), rgba(111, 111, 111, 0.75), rgba(0, 0, 0, 0.1));
         margin: 0.3em 0 -0.2em 0;
     }       
-
-    #label_skills { color: red; font-weight: 700; }
+    
     .row
     {
         width: 100%;
