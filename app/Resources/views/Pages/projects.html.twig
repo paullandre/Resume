@@ -1,33 +1,42 @@
 {% extends 'Main/main.html.twig' %}
 {% block page %}
-<div class="content-wrapper" style="background-color: #222d32; border: 1px solid #37464f">
-    {% block breadcrumbs %}
-        {% include 'Main/breadcrumbs.html.twig' with {'page': 'Projects', 'color': '#AE4D4D'} %}
-    {% endblock %}
-    
-    <!-- Main content -->
-    <section class="content container-fluid">
+    <div class="content-wrapper" style="background-color: #222d32; border: 1px solid #37464f">
+        {% block breadcrumbs %}
+            {% include 'Main/breadcrumbs.html.twig' with {'page': 'Projects', 'color': '#AE4D4D'} %}
+        {% endblock %}
 
-        <!--------------------------
-        | Your Page Content Here |
-        -------------------------->        
-        {% if projects is defined %}
-            {% for data in projects %}
-            <ul class="parent_ul">
-                <li>{{ data.project }} </li>
-            </ul>
-            <ul class="child_ul">
-                <li>{{ data.company }}</li>
-                <li>{{ data.description }} </li>
-                <li>{{ data.skillId }}</li>                
-            </ul>
-            {% endfor %}
-        {% endif %}
+        <!-- Main content -->
+        <section class="content container-fluid">
 
-    </section>    
-</div>
-        <style>
-            .parent_ul, .child_ul { color: darkgray; }
-            .parent_ul { list-style: none; margin: 0 0 0 -2.3em }
-        </style>
+            <!--------------------------
+            | Your Page Content Here |
+            -------------------------->        
+            {% if projects is defined %}
+                {% for data in projects %}
+                    <ul class="parent_ul">
+                        <li class="company">{{ data.project }} </li>
+                        <li>
+                            <ul class="child_ul">
+                                <li>Company : &nbsp;&nbsp;&nbsp;<label>{{ data.company }}</label></li>                        
+                                <ul>
+                                    {% set desc = data.description|split('.') %}
+                                    {% for key,value in desc %}                                    
+                                        <li>{{ value }}</li>
+                                        {% endfor %}  
+                                    <br />
+                                </ul>                                                
+                            </ul>
+                        </li>
+                    </ul>            
+                {% endfor %}
+            {% endif %}
+
+        </section>    
+    </div>
+    <style>
+        .company { letter-spacing: 1px; color: OliveDrab; }
+        .parent_ul, .child_ul { color: darkgray; }
+        .parent_ul { list-style: none; margin: 0 0 0 -2.3em }
+        label { color: rgb(174, 77, 77); letter-spacing: 1px; }
+    </style>
 {% endblock %}
