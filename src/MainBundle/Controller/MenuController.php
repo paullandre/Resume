@@ -104,7 +104,7 @@ class MenuController extends Controller
         $records = $service->getAllMenu();
         
         $service = $this->get("services.project");
-        $projects = $service->getAllProjects();           
+        $projects = $service->getAllProjects();        
         
         return $this->render('Pages/projects.html.twig', array("menu" => $records, 
             'active' => 'projects',
